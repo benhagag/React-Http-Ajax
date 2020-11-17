@@ -6,6 +6,16 @@ import registerServiceWorker from './registerServiceWorker';
 import axios from 'axios';
 
 /**
+ * Global Configuration
+ * baseURL - Will be added in each axios call before automatically
+ * headers.common - Attach Authorization header for all axios requests
+ * headers.post - Attach header Content-Type in all post axios requests
+ */
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
+axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+
+/**
  * Config the interceptors in request config.
  * 
  * Axios interceptors are functions that Axios calls for every request.

@@ -15,7 +15,7 @@ class Blog extends Component {
     };
 
     componentDidMount(){
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('/posts')
             .then(reposne => {
                 const posts = reposne.data.slice(0, 4); // Get the 4 first object data
                 const updatePosts = posts.map(post=>{
