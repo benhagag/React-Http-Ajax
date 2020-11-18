@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 // importing the axios instance from axios file
 import axios from '../../../axios';
 import Post from '../../../components/Post/Post'; 
@@ -44,6 +43,8 @@ class Posts extends Component{
                             title={post.title} 
                             author={post.author}
                             key={post.id}
+                            // passing any props that Posts component has in to the Post component
+                            // {...this.props}
                             clicked={() => this.postSelectedHandler(post.id)}
                         />
             });
