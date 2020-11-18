@@ -13,6 +13,7 @@ class Posts extends Component{
     };
 
     componentDidMount(){
+        console.log(this.props);
         axios.get('/posts')
             .then(reposne => {
                 const posts = reposne.data.slice(0, 4); // Get the 4 first object data
