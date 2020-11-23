@@ -20,6 +20,7 @@ class Blog extends Component {
                         <li>
                             {/* Link - Will re-render instead reloading! */}
                             <Link to={{
+                                // pathname: this.props.match.url +'/new-post',
                                 pathname: '/new-post',
                                 hash: '#submit',
                                 search: '?quick-submit=true'
